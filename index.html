@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="w-full h-fit min-h-screen bg-gray-500 flex justify-center">
+        <div class="container w-full h-full bg-gray-500 text-center flex flex-col items-center my-6">
+            <h1 class="text-5xl font-bold underline mb-4 bg-gray-400 p-4 rounded-3xl">DataList Sorter</h1>
+            <div class="row flex mb-2 items-end">
+                <div class="col w-32">
+                    <p class="font-bold">Per Page:</p>
+                    <button id="ttlBtn" class="bg-gray-400 border border-black w-24 my-2">10</button>
+                </div>
+                <div class="col w-32">
+                    <p class="font-bold">Sort By:</p>
+                    <button id="sortBtn" class="bg-gray-400 border border-black w-24 my-2">ID</button>
+                </div>
+                <div class="col w-32">
+                    <button id="prevBtn" class="bg-gray-400 border border-black w-24 my-2">Prev Set</button>
+                </div>
+                <div class="col w-32">
+                    <button id="nextBtn" class="bg-gray-400 border border-black w-24 my-2">Next Set</button>
+                </div>
+                <span></span>
+            </div>
+            <div class="row bg-gray-400 rounded-3xl w-fit">
+                <div class="row w-full">
+                    <div class="row flex flex-row justify-center">
+                        <div class="row font-bold underline text-2xl w-48">ID</div>
+                        <div class="row font-bold underline text-2xl  w-48">First Name</div>
+                        <div class="row font-bold underline text-2xl  w-48">Last Name</div>
+                        <div class="row font-bold underline text-2xl  w-48">Height</div>
+                        <div class="row font-bold underline text-2xl  w-48">Age</div>
+                    </div>
+                </div>
+                <div class="row flex justify-center">
+                    <div id="idCol" class="col w-48">
+                        <div class="row mb-2">ExampID</div>
+
+                    </div>
+                    <div id="firstCol" class="col w-48">
+                        <div class="row mb-2">ExampFirst</div>
+
+                    </div>
+                    <div id="lastCol" class="col w-48">
+                        <div class="row mb-2">ExampLast</div>
+
+                    </div>
+                    <div id="heightCol" class="col w-48">
+                        <div class="row mb-2">ExampHeight</div>
+
+                    </div>
+                    <div id="ageCol" class="col w-48">
+                        <div class="row mb-2">ExamptAge</div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
