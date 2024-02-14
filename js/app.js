@@ -88,6 +88,7 @@ const genList = async (startInc) =>{
     idCol.innerHTML = '';
     firstCol.innerHTML = '';
     lastCol.innerHTML = '';
+    emailCol.innerHTML = '';
     heightCol.innerHTML = '';
     ageCol.innerHTML = '';
 
@@ -115,6 +116,7 @@ const genList = async (startInc) =>{
         let idRow = document.createElement('div')
         let firstRow = document.createElement('div')
         let lastRow = document.createElement('div')
+        let emailRow = document.createElement('div')
         let heightRow = document.createElement('div')
         let ageRow = document.createElement('div')
 
@@ -123,6 +125,7 @@ const genList = async (startInc) =>{
             idRow.classList.add(clas)
             firstRow.classList.add(clas)
             lastRow.classList.add(clas)
+            emailRow.classList.add(clas)
             heightRow.classList.add(clas)
             ageRow.classList.add(clas)
         })
@@ -130,12 +133,14 @@ const genList = async (startInc) =>{
         idRow.innerText = person.Id;
         firstRow.innerText = person.FirstName;
         lastRow.innerText = person.LastName;
+        emailRow.innerText = person.Email;
         heightRow.innerText = person.Height;
         ageRow.innerText = person.Age;
 
         idCol.appendChild(idRow);
         firstCol.appendChild(firstRow);
         lastCol.appendChild(lastRow);
+        emailCol.appendChild(emailRow);
         heightCol.appendChild(heightRow);
         ageCol.appendChild(ageRow);
     })
