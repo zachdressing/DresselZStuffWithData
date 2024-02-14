@@ -9,6 +9,9 @@ let heightCol = document.getElementById("heightCol");
 let ageCol = document.getElementById("ageCol");
 let nextBtn = document.getElementById("nextBtn")
 let prevBtn = document.getElementById("prevBtn")
+let scendBtn = document.getElementById("scendBtn")
+let mysteryBtn = document.getElementById("mysteryBtn")
+
 
 let json = data;
 let startInc = 0;
@@ -53,6 +56,29 @@ prevBtn.addEventListener('click', () =>{
         startInc = data.People.length - ((ttl+1)*10);
     }
     genList(startInc)
+})
+
+scendBtn.addEventListener('click', () =>{
+    if(scendBtn.innerText == "Ascending"){
+        scendBtn.innerText = "Descending";
+        json.People.reverse();
+    }
+    else if(scendBtn.innerText == "Descending"){
+        scendBtn.innerText = "Ascending"
+        json.People.reverse();
+    }
+    genList(startInc)
+})
+
+mysteryBtn.addEventListener('click', () =>{
+    if(bgDiv.classList.contains("bg-gray-500")){
+        bgDiv.classList.replace("bg-gray-500", "rainbow");
+    }
+    else{
+        bgDiv.classList.replace("rainbow", "bg-gray-500");
+
+    }
+    console.log(bgDiv.classList)
 })
 
 
