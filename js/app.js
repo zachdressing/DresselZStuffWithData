@@ -12,9 +12,10 @@ let prevBtn = document.getElementById("prevBtn")
 let scendBtn = document.getElementById("scendBtn")
 let mysteryBtn = document.getElementById("mysteryBtn")
 
-
 let json = data;
 let startInc = 0;
+
+let descendBool = false;
 
 let ttlArr = [10, 20, 30, 40, 50];
 let ttl = 0;
@@ -59,13 +60,13 @@ prevBtn.addEventListener('click', () =>{
 })
 
 scendBtn.addEventListener('click', () =>{
-    if(scendBtn.innerText == "Ascending"){
+    if(!descendBool){
+        descendBool = true;
         scendBtn.innerText = "Descending";
-        json.People.reverse();
     }
-    else if(scendBtn.innerText == "Descending"){
+    else if(descendBool){
+        descendBool = false;
         scendBtn.innerText = "Ascending"
-        json.People.reverse();
     }
     genList(startInc)
 })
@@ -104,6 +105,10 @@ const genList = async (startInc) =>{
     }
     else if(sortBtn.innerText == "Age"){
         json.People.sort(sortAge);
+    }
+
+    if(descendBool){
+        json.People.reverse();
     }
 
     json.People.slice(startInc,startInc + (ttl+1)*10).map(person =>{
